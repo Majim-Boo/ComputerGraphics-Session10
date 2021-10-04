@@ -1,0 +1,31 @@
+<canvas id='tablero' width=500 height=500></canvas>
+<script>
+
+  function circulo(cd, radius, colorBorde, colorRelleno, grosor){
+    ctx.beginPath();
+    ctx.strokeStyle = colorBorde;
+    ctx.fillStyle = colorRelleno;
+    ctx.lineWidth = grosor;
+    ctx.arc(cd[0],cd[1],radius, 0, 2*Math.PI);
+    ctx.closePath();
+	  ctx.stroke();
+	  ctx.fill();
+  }
+	var c = document.getElementById('tablero')
+	var ctx = c.getContext('2d')
+	
+	//Variable arreglo de colores predefinidos
+	var [azul, verde, rojo, blanco] = ['rgba(0,162,232)', 'rgba(181,230,29)', 'rgba(237,28,36)', 'rgba(255,255,255)'];
+
+	//Variables de arreglos ubicación figuras predefinidas
+	var pentaAzul=[344,3, 540,142, 465,370, 224,370, 150,142], pentaBlanco=[305,68, 424,157, 380,303, 226,303, 183,157];
+	var rectVerde=[13,143, 544,237, 544,288, 4,191];
+	var circRojo=[168, 162], circBlanco=[193,162];
+
+//Forma 1: Usar el id del elemento
+
+//Forma 2: Acceder al elemento mediante su clase
+
+ circulo(
+  
+</script>
